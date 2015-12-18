@@ -1,0 +1,26 @@
+buildscript {
+    ext.kotlin_version = '1.0.0-beta-3595'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'kotlin'
+apply plugin: 'application'
+
+// run ./build/classes/main/playground/MainKt.class
+defaultTasks 'run'
+mainClassName = 'playground.MainKt'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    testCompile 'junit:junit:4.12'
+}
