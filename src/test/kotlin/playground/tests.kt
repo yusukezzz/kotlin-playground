@@ -1,10 +1,10 @@
 package playground
 
 import kotlin.test.assertEquals
-import org.junit.Test as test
+import org.junit.Test
 
 class TestSource {
-    @test fun hello() {
+    @Test fun hello() {
         assertEquals("Hello, kotlin!", getHello())
     }
 }
